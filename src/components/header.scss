@@ -1,0 +1,35 @@
+@import "./global.scss";
+
+.header {
+  min-height: 90vh;
+  background-color: $theme-blue;
+  color: white;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 80px;
+
+  h2 {
+    font-family: $font-text;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .header-container {
+    width: 100%;
+
+    .header-caption-container {
+      position: relative;
+
+      .header-caption {
+        margin: 0 auto;
+        min-width: 300px;
+        max-width: 700px;
+        padding: 40px;
+        background-color: aliceblue;
+        color: $theme-blue;
+        border-radius: 15px;
+      }
+    }
+  }
+}

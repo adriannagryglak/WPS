@@ -1,0 +1,82 @@
+/* variables */
+
+$font-decor: "Azonix Regular";
+$font-text: "Arkitype - Modulus Pro Regular";
+$font-text-light: "Arkitype - Modulus Pro Extra Light";
+$theme-red: #a83031;
+$theme-blue: #2D3248;
+
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover{
+    color: inherit;
+  }
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Azonix Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Azonix Regular"), url("/fonts/Azonix.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arkitype - Modulus Pro Regular";
+  src: local("Arkitype - Modulus Pro Regular"),
+    url("/fonts/Arkitype - Modulus Pro Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Arkitype - Modulus Pro Extra Light";
+  src: local("Arkitype - Modulus Pro Extra Light"),
+    url("/fonts/Arkitype - Modulus Pro Extra Light.otf") format("opentype");
+}

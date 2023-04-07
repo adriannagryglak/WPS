@@ -1,0 +1,78 @@
+@import "./global.scss";
+
+.carousel-container {
+  height: 700px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+
+  .carousel-initialized {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    .carousel-track {
+      height: 100% !important;
+    }
+
+    .carousel-item,
+    .carousel-row {
+      height: 100%;
+      div {
+        height: 100%;
+      }
+    }
+
+    .item {
+      video {
+        height: 100%;
+        width: 100%;
+        object-position: top;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-family: $font-text-light;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+
+      &::after {
+        box-shadow: inset 0 -190px 125px $theme-blue;
+        content: " ";
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .carousel-dots {
+    z-index: 100;
+    margin: 0 0 20px 0;
+
+    li {
+      button {
+        &::before {
+          opacity: 1;
+          color: rgb(129, 164, 164);
+        }
+      }
+
+      &.carousel-dots-active {
+        button {
+          &::before {
+            opacity: 1;
+            color: $theme-red;
+          }
+        }
+      }
+    }
+  }
+}

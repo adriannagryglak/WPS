@@ -1,0 +1,48 @@
+@import "./global.scss";
+
+.header-navbar {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 60px;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+
+  &::after {
+    box-shadow: 0 137px 40px $theme-blue;
+    content: " ";
+    height: 214%;
+    position: absolute;
+    left: -44%;
+    top: -293%;
+    width: 211%;
+    z-index: -1;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+
+    li {
+      margin-left: 30px;
+      text-transform: uppercase;
+      font-family: $font-text;
+    }
+  }
+
+  .logo{
+    font-family: $font-decor;
+  }
+
+  @media (max-width: 800px) {
+    justify-content: flex-end;
+    ul {
+      display: none;
+    }
+  }
+}

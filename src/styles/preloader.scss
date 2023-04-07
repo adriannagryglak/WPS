@@ -1,0 +1,40 @@
+body {
+    position: relative;
+
+    #preloader{
+      display: none;
+    }
+
+    &.preloader_active {
+  
+      #preloader {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        z-index: 9999;
+        color: white;
+        overflow: hidden;
+      }
+    }
+  
+    &.preloader_ready {
+  
+      #preloader {
+        animation: preloaderLeaving 1s forwards;
+  
+        @keyframes preloaderLeaving {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
