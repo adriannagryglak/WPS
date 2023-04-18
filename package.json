@@ -11,8 +11,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "gatsby": "^5.8.1",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sass": "^6.8.0",
     "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-source-filesystem": "^5.8.0",
@@ -20,8 +22,12 @@
     "infinite-react-carousel": "^1.2.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-responsive": "^9.0.2",
+    "react-spring": "^9.7.1",
     "react-use-scroll-indicator": "^1.1.1",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
     "prettier": "^2.8.7"

@@ -8,12 +8,14 @@ const Navbar = () => (
   <nav className="header-navbar">
     <ul>
         <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
-        <li><Link>abonament bez limitu</Link></li>
-        <li><Link>centrale ip pbx</Link></li>
-        <li><Link>nagrywanie rozmów</Link></li>
-        <li><Link>telekonferencje</Link></li>
+        <li><Link to="/abonament-bez-limitu" activeClassName="active-link">abonament bez limitu</Link></li>
+        <li><Link to="/centrale-ip-box" activeClassName="active-link">centrale ip pbx</Link></li>
+        <li><Link to="/nagrywanie-rozmow" activeClassName="active-link">nagrywanie rozmów</Link></li>
+        <li><Link to="/telekonferencje" activeClassName="active-link">telekonferencje</Link></li>
     </ul>
-    <div className="logo">POLTEL</div>
+    <div className="logo">
+      <Link to="/">POLTEL</Link>
+    </div>
   </nav>
 )
 

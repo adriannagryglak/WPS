@@ -5,15 +5,10 @@ import "./carousel.scss";
 
 export default function Carousel() {
 
-  const [indexesShouldPlay, setIndexesShouldPlay] = React.useState([0]);
-
   return (
-    <Slider adaptiveHeight={true} dots arrows={false} className="carousel-container" 
-      beforeChange={i =>{
-          console.log('ruszam elementem o indexie', i)
-      }}>
+    <Slider adaptiveHeight={true} dots arrows={false} className="carousel-container" >
     <div className="item">
-      <video muted autoPlay loop>
+      <video muted autoPlay loop loading="eager">
         <source src={video} type="video/mp4" />
       </video>
       <h2>autorskie rozwiązanie telefonii voip</h2>

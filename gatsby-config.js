@@ -29,15 +29,36 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `PolTel | usługi VoIP | telfonia VoIp bez limitu`,
-        short_name: `Poltel`,
+        name: `POLTEL | usługi VoIP | telfonia VoIp bez limitu`,
+        short_name: `POLTEL`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`,
+        icon: `src/images/logogold.png`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /svg/
+        }
+      }
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Lato`,
+            file: `https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap`,
+          },
+        ],
       },
     },
   ],
