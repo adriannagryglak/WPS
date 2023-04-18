@@ -9,7 +9,7 @@
     h1 {
         font-family: $font-text;
         font-size: 2.5rem;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
         text-align: center;
         font-weight: lighter;
         @media (max-width: 800px) {
@@ -22,4 +22,80 @@
           
           }
       }
+
+    p{
+        font-family: $font-lato;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-bottom: 50px;
+    }  
+
+    form{
+        background-color: $theme-bg;
+        border-radius: 15px;
+        padding: 50px;
+        display: flex;
+        flex-direction:column ;
+        max-width: 500px;
+        margin: 0 auto;
+
+        input,
+        textarea {
+          border: none;
+          color: black;
+          border-bottom: 1px solid $theme-blue;
+          padding-bottom: 8px;
+          margin-top: 24px;
+          transition: all 0.4s ease;
+          cursor: pointer;
+          font-family: $font-lato;
+          &::placeholder {
+            
+            font-family: $font-lato;
+            font-size: 1.2rem;
+          }
+      
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid $theme-blue;
+          }
+      
+          &.error{
+            border-bottom: 1px solid $theme-red;
+          }
+        }
+
+        button{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: $font-decor;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            transition: all 0.4s ease;
+            background: url("../images/gold.png") no-repeat;
+            background-size: 200% 100%;
+            background-position: left;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+            margin: 40px auto 0 auto;
+            &:hover {
+              background-position: right;
+            }
+        }
+
+        @media (max-width: 400px) {
+            padding: 50px 20px;
+            input{
+                &::placeholder{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }

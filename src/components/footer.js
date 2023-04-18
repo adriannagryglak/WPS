@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { useMediaQuery } from 'react-responsive'
+
 export default function Footer() {
 
     const isMobileLayout = useMediaQuery({ query: '(max-width: 900px)' });
