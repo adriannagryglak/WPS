@@ -8,7 +8,6 @@ export default function Contact() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState(null);
-  const [agree, setAgree] = useState(false);
 
   const onSubmit = async (values, actions) =>{
 
@@ -19,7 +18,7 @@ export default function Contact() {
         'Accept': 'application/json'
     },
     body: JSON.stringify({
-        imię : values.name,
+        "imię lub nazwa firmy": values.name,
         email: values.email,
         telefon: values.tel ? values.tel : "nie podano",
         wiadomość: values.message,
@@ -36,7 +35,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="contact container">
+    <section className="contact container" id="kontakt">
       <h1>skontaktuj się z nami</h1>
       <p>
         Jeśli nasuwa Ci się jakieś pytanie, chciałbyś podjąć z nami współpracę
@@ -53,9 +52,7 @@ export default function Contact() {
       //validationSchema={basicSchema} 
       onSubmit={onSubmit}>
       {({errors, touched, isSubmitting})=>(
-        <Form className="contact-form" 
-        // action="https://formsubmit.co/piotr@czyrski.pl" method="POST" 
-        >
+        <Form className="contact-form">
         
             <label htmlFor="name" className='hidden-accessible'>Imię lub nazwa firmy</label>
             <Field className={errors.name && touched.name ? "error":""} id="name" type="text" name="name" placeholder="imię lub nazwa firmy" />
@@ -80,6 +77,9 @@ export default function Contact() {
         </Form>
       )} 
     </Formik> 
+    {/* <div className="contact-data__container">
+      test
+    </div> */}
     </section>
   )
 }

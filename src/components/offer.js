@@ -16,7 +16,7 @@ export default function Offer() {
   const [ref, inView] = useInView()
 
   return (
-    <section className="offer container">
+    <section className="offer container" id="oferta">
       <h1>poznaj naszą ofertę</h1>
       <div className="offer-container">
         {/* <FontAwesomeIcon icon={faPhoneVolume} className='offer-icon'/> */}

@@ -3,17 +3,21 @@ import { Link } from "gatsby"
 import video from "../assets/hero-video.mp4"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import "../styles/pages/subpage.scss"
+import "../styles/pages/abonament.scss"
 
 const SecondPage = () => (
   <Layout>
-    <section className="hero-video">
-      <video muted autoPlay loop loading="eager">
-          <source src={video} type="video/mp4" />
-      </video>
+      <header className="subpage-header">
+        <video muted autoPlay loop loading="eager" className="hero-video">
+            <source src={video} type="video/mp4" />
+        </video>
+      </header>
+    <section className="content container">
+      <h1>abonament bez limitu</h1>
+      <p>Więcej treści wkrótce</p>
+      <Link to="/">powrót</Link>
     </section>
-    <h1>abonament bez limitu</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">POLTEL na strone głowna</Link>
   </Layout>
 )
 

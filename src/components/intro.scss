@@ -20,9 +20,12 @@
     margin-bottom: 50px;
     word-wrap: break-word;
     position: relative;
+    width: fit-content;
+    
   }
 
   a {
+   
     font-family: $font-decor;
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -53,6 +56,16 @@
     flex-wrap: wrap;
     gap: 90px;
     align-items: center;
+
+    .intro-data__item{
+      &::after{
+        content: "";
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        background-color: $theme-red;
+      }
+    }
 
     .number {
       font-size: 2rem;

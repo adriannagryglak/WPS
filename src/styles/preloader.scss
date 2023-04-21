@@ -1,3 +1,6 @@
+
+@import "../components/global.scss";
+
 body {
     position: relative;
 
@@ -15,11 +18,21 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #000000;
+        background-color: $theme-blue;
         z-index: 9999;
-        color: white;
         overflow: hidden;
+        
+        img{
+          animation: preloaderActive1 2s linear infinite;
+        }
       }
+
+      @keyframes preloaderActive1 {
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+
     }
   
     &.preloader_ready {

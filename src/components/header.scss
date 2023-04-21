@@ -16,7 +16,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 110%;
     z-index: 1;
     opacity: 0.8;
   }
@@ -41,7 +41,7 @@
       padding: 0 60px;
 
       .header-caption {
-        margin: 0 auto;
+       margin: 0 auto;
         width: 60vw;
         max-width: 1200px;
         padding: 40px 50px;
@@ -49,7 +49,7 @@
         color: $theme-blue;
         border-radius: 15px;
         font-family: $font-lato;
-        font-weight: 600;
+        font-weight: 600; 
 
         .phone-img{
           float: right;
@@ -80,6 +80,10 @@
           flex-direction: column;
           align-items: center;
           padding: 40px 20px;
+
+          p{
+            text-align: center;
+          }
 
           h2{
             padding: 0;

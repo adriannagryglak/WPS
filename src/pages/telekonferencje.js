@@ -1,14 +1,22 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
+import video from "../assets/hero-video.mp4"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import "../styles/pages/subpage.scss"
 
 const FifthPage = () => (
   <Layout>
-    <h1>telekonferencje</h1>
-    <p>Welcome to page 5</p>
-    <Link to="/">POLTEL na strone głowna</Link>
+      <header className="subpage-header">
+        <video muted autoPlay loop loading="eager" className="hero-video">
+            <source src={video} type="video/mp4" />
+        </video>
+      </header>
+    <section className="content container">
+      <h1>telekonferencje</h1>
+      <p>Więcej treści wkrótce</p>
+      <Link to="/">powrót</Link>
+    </section>
   </Layout>
 )
 

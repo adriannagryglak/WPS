@@ -35,7 +35,7 @@ exports.onRenderBody = ({
   })
   setPreBodyComponents([
     <div id="preloader">
-      <img src="/images/logo.png" alt="logo" style={{"height": "calc(3.23625vw + 77.86408px)"}} />
+      <img src="/images/logogold.png" alt="logo" style={{"height": "calc(3.23625vw + 77.86408px)"}} />
       <div className="preloader_animation"></div>
     </div>
   ])

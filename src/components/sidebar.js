@@ -7,15 +7,14 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useScrollIndicator } from 'react-use-scroll-indicator';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { StaticImage } from "gatsby-plugin-image"
+import { useMediaQuery } from 'react-responsive'
 
 export default function Sidebar(){
 
     const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
     const [state] = useScrollIndicator();
     const [isOpen, setIsOpen] = React.useState(false);
-    const [isHovered, setIsHovered] = React.useState(false);
-
+    const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
 
     React.useEffect(() => {
         const mouseMoveHandler = (event) => {
@@ -35,7 +34,6 @@ export default function Sidebar(){
         <>
         
         <div className="sidebar">
-            
             <div className="hamburger" onClick={()=>{setIsOpen(true)}}>
                 <div></div>
                 <div></div>
@@ -54,14 +52,11 @@ export default function Sidebar(){
                     <FontAwesomeIcon icon={faEnvelope} />
                 </a>
             </div>
-
             <div className={isOpen ? "sidebar-menu open" : "sidebar-menu"} onClick={()=>{setIsOpen(false)}}>
-            {isOpen && <div className={isHovered ? "custom-cursor scale-down" : "custom-cursor"} style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}></div>}
-       
-                <ul onMouseEnter={()=>{setIsHovered(true)}} onMouseOver={()=>{setIsHovered(true)}} onMouseLeave={()=>{setIsHovered(false)}} >
+                <ul >
                     <li><Link to="/o-nas">o nas</Link></li>
                     <li><Link to="/sklep">sklep</Link></li>
-                    <li><AnchorLink to="/#contact" stripHash>kontakt</AnchorLink></li>
+                    <li><AnchorLink to="/#kontakt" stripHash>kontakt</AnchorLink></li>
                     <li>
                         współpraca
                         <ul>
@@ -74,31 +69,20 @@ export default function Sidebar(){
                     <li>
                         oferta
                         <ul>
-                            <li><Link className="offer-item" to="/klient-indywidualny">klient indywidualny</Link></li>
-                            <li><Link className="offer-item" to="/klient-biznesowy">klient biznesowy</Link></li>
-                            <li><Link className="offer-item" to="/urzedy-i-instytucje">urzędy i instytucje</Link></li>
+                            <li className="mobile-only"><Link to="/abonament-bez-limitu" activeClassName="active-link" >abonament bez limitu</Link></li>
+                            <li className="mobile-only"><Link to="/centrale-ip-box" activeClassName="active-link" >centrale ip pbx</Link></li>
+                            <li className="mobile-only"><Link to="/nagrywanie-rozmow" activeClassName="active-link" >nagrywanie rozmów</Link></li>
+                            <li className="mobile-only"><Link to="/telekonferencje" activeClassName="active-link" >telekonferencje</Link></li>
+                        
+                            <li><Link className="offer-item" activeClassName="active-link" to="/klient-indywidualny">klient indywidualny</Link></li>
+                            <li><Link className="offer-item" activeClassName="active-link" to="/klient-biznesowy">klient biznesowy</Link></li>
+                            <li><Link className="offer-item" activeClassName="active-link" to="/urzedy-i-instytucje">urzędy i instytucje</Link></li>
                         </ul>
                     </li>
                     <li><ul className="sidebar-menu__icons">
-                    {/* <div className="sidebar-menu__logo">
-                        <StaticImage
-                        src="../images/logogold.png"
-                        loading="eager"
-                        placeholder="blurred"
-                        className="logo__img"
-                        quality={95}
-                        formats={["auto", "webp", "avif"]}
-                        alt=""
-                        />
-                        <span>POLTEL</span>
-                    </div> */}
                     
                     <FontAwesomeIcon icon={faPhone} className='icon'/>
-                    {/* <ul>
-                        <li><a href='tel:7177776610'>biuro 71 7777 66 10</a></li>
-                        <li><a href='tel:7177776600'>serwis 71 777 66 00</a></li>
-                        <li><a href='tel:7177776616'>sklep 71 777 66 16</a></li>
-                    </ul> */}
+
                     <a href="https://www.facebook.com/voippoltel/">
                     <FontAwesomeIcon className="icon" icon={faFacebookF} />
                     </a>
@@ -107,7 +91,7 @@ export default function Sidebar(){
                     </a>
                 </ul></li>
                 </ul>
-                
+                {isOpen && <div className="custom-cursor" style={!isMobile ? { left: `${mousePosition.x}px`, top: `${mousePosition.y}px` } : {left: "20px", top: "10px"}}></div>}
                 
             </div>
         </div>

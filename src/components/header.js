@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./header.scss"
 import Carousel from "./carousel.js"
@@ -44,10 +43,8 @@ export default function Header() {
             <p className="paragraph__third">
               Indywidualna oferta cenowa zależna
               od generowanego ruchu (stawki minutowe).             
-              <br />
               <br /> Nielimitowane połączenia
               stacjonarne i komórkowe do wszystkich sieci (ryczałt). 
-              <br />
               <br /> = 20 – 50%
               niższe rachunki względem aktualnej FV
             </p></> : readMoreOn && isMobileBox ? <></> : <>

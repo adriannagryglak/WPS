@@ -94,8 +94,14 @@
     width: 40px;
 
     .hamburger{
-      height: 40px;
-      padding: 13px 10px;
+      height: 50px;
+      padding: 19px 3px 13px 10px;
+      background: transparent;
+      backdrop-filter: blur(5px);
+      div{
+        background-color: $theme-red;
+        
+      }
     }
 
     .icons-container{
@@ -124,11 +130,22 @@
     ul {
       list-style-type: none;
       padding: 0;
+      width: fit-content;
+
+      &:hover ~ .custom-cursor{
+        display: none;
+      }
 
       a{
         &:hover{
           color: $theme-red;
           font-weight: bolder;
+        }
+
+        &.active-link{
+          color: $theme-red;
+          font-weight: lighter;
+          pointer-events: none;
         }
       }
 
@@ -137,6 +154,12 @@
         font-size: 1.4rem;
         text-transform: uppercase;
         padding-bottom: 10px;
+
+        &.mobile-only{
+          @media (min-width: 1090px) {
+            display: none;
+          }
+        }
         ul{
           padding-left: 20px;
           li{
@@ -145,16 +168,6 @@
         }
       }
     }
-
-    // .sidebar-menu__logo{
-    //   span{
-    //     font-family: $font-decor;
-    //   }
-    //   .logo__img{
-    //     height: 1.2rem;
-    //     width: 1.2rem;
-    //   }
-    // }
 
     .sidebar-menu__icons{
       padding: 50px 0 0 0 ;
@@ -176,6 +189,10 @@
           
         }
       }
+
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     &.open {
@@ -185,9 +202,12 @@
       ul {
         cursor: auto;
       }
+
+      
+      @media (max-width: 500px) {
+        cursor: auto;
+      }
     }
-
-
 
     .custom-cursor {
       width: 30px;
@@ -220,8 +240,11 @@
         transform: rotate(-45deg);
       }
 
-      &.scale-down {
-        animation: scaledown 0.7s ease forwards;
+      @media (max-width: 500px) {
+        opacity: 1;
+        top: 0;
+        left: 0;
+
       }
     }
 
@@ -237,6 +260,7 @@
     }
 
     @media (max-width: 650px) {
+      width: 80vw;
       .sidebar-menu__icons{
         .icon{
           width: 1rem;
