@@ -155,6 +155,8 @@ function AboutPage() {
         </p>
         </div>
 
+
+
         <div className="welcome-container container">
           <div className="item" onClick={()=>{setIsDetailsOpen(prev=>{
             return {...prev, 1: !prev[1]}})}}>
@@ -259,7 +261,27 @@ function AboutPage() {
           </div>}
 
         </div>
+        <div className="ceo-container">
+      <StaticImage
+                src="../images/g-abramek.png"
+                loading="lazy"
+                placeholder="blurred"
+                className="ceo-img"
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt="portret, mężczyzna w garniturze, średniego wieku, czarne włosy."
+      />
+      <div className="ceo-info">
+        <p className="ceo-quote"></p>
+        <p className="ceo-name">Grzegorz Abramek</p>
+        <p>PREZES ZARZĄDU</p>
+        <a href="tel:717776616">tel. (71) 777-66-16</a>
+        <a href="mailto:grzegorz.abramek@e-poltel.pl​">grzegorz.abramek@e-poltel.pl​</a>
+      </div>
+    </div>
       </section>
+
+    
     </Layout>
   )
 }

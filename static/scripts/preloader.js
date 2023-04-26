@@ -1,6 +1,5 @@
 
 var body = document.querySelector("body");
-console.log('siema');
 document.onreadystatechange = function () {
   console.log('state changed tak?')
   if (document.readyState === "complete") {

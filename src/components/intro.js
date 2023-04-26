@@ -27,8 +27,7 @@ export default function Intro() {
         }}
       >
         <p ref={ref2} className="container">
-          tanie i niezawodne usługi telekomunikacyjne i teletransmisyjne z
-          wieloletnim doświadczeniem
+        Łączy nas pasja do nowych technologii
         </p>
         <Link to="/o-nas">wiecej o nas</Link>
       </animated.div>

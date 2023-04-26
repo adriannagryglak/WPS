@@ -23,6 +23,7 @@ footer {
   }
   a {
     white-space: nowrap;
+    transition: all 0.4s ease;
     &:hover {
       color: $theme-red;
     }
@@ -61,6 +62,7 @@ footer {
       span {
         font-family: $font-decor;
         font-size: 2rem;
+        color: white;
       }
     }
 
