@@ -18,11 +18,27 @@ exports.onRenderBody = ({
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/Inter-roman.var.woff2"
+      href="/fonts/Azonix.woff"
       as="font"
-      type="font/woff2"
+      type="font/woff"
       crossOrigin="anonymous"
-      key="interFont"
+      key="azonixFont"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/ArkitypeRegular.otf"
+      as="font"
+      type="font/otf"
+      crossOrigin="anonymous"
+      key="arkitypeRegularFont"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/ArkitypeLight.otf"
+      as="font"
+      type="font/otf"
+      crossOrigin="anonymous"
+      key="arkitypeLightFont"
     />,
     <link as="script" rel="preload" href="/scripts/preloader.js" />,
     <noscript>

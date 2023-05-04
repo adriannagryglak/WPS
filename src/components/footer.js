@@ -36,7 +36,8 @@ export default function Footer() {
             <li><Link to="/serws" activeClassName='active'>Serwis</Link></li>
             <li><Link to="/slownik-tematyczny" activeClassName='active'>Słownik tematyczny</Link></li>
             <li><Link to="/polityka-prywatnosci" activeClassName='active'>Polityka prywatności</Link></li>
-            <li><a>Regulamin</a></li>
+            <li><Link to="/regulamin" activeClassName='active'>Regulamin</Link></li>
+            
         </ul>
         <ul className='footer-contact-data'>
             <li className='data-container'>
