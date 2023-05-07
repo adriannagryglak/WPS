@@ -1,0 +1,55 @@
+@import "../../components/global.scss";
+
+.not-found {
+    background-color: $theme-blue;
+    flex-grow: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        font-size: 4rem;
+        font-family: $font-text-light;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: $font-text-light;
+        margin: 40px 0;
+    }
+
+    a {
+        font-family: $font-decor;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        transition: all 0.4s ease;
+        background: url("../../images/gold.png") no-repeat;
+        background-size: 200% 100%;
+        background-position: left;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+        &:hover {
+          background-position: right;
+        }
+      }
+
+      @media (max-width: 600px){
+        padding-top: 150px;
+        padding-bottom: 100px;
+
+        h1{
+            font-size: 2.2rem;
+        }
+        h2{
+            font-size: 1.4rem;
+        }
+        a{
+            font-size: 1.2rem;
+        }
+      }
+}

@@ -2,7 +2,7 @@ import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { StaticImage } from "gatsby-plugin-image"
 import "./partners.scss"
-import { Pagination } from "swiper"
+import { Pagination, Autoplay } from "swiper"
 import "swiper/css"
 import "swiper/css/pagination"
 import { useMediaQuery } from 'react-responsive'
@@ -23,7 +23,11 @@ export default function Partners() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination, Autoplay]}
       >
         <SwiperSlide className="swiper-item">
           <StaticImage

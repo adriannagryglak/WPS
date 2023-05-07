@@ -7,7 +7,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 const Navbar = () => (
   <nav className="header-navbar">
     <ul>
-        <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
+        {/* <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li> */}
         <li><Link to="/abonament-bez-limitu" activeClassName="active-link">abonament bez limitu</Link></li>
         <li><Link to="/centrale-ip-box" activeClassName="active-link">centrale ip pbx</Link></li>
         <li><Link to="/nagrywanie-rozmow" activeClassName="active-link">nagrywanie rozmów</Link></li>

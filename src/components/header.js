@@ -15,6 +15,7 @@ export default function Header() {
         <Carousel />
         <div className="header-caption-container">
           <div className="header-caption">
+            <h2 className="header-title">autorskie rozwiązanie telefonii voip</h2>
             <h2>Obniżamy koszty połączeń!</h2>
             <StaticImage
               src="../images/phone.png"

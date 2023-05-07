@@ -12,8 +12,9 @@ export default function Footer() {
   return (
     <footer className='container'>
         <div className='footer-logo__container'>
-            <Link to="/">
+            
             <div className='footer-logo'>
+            <Link to="/" className='footer-logo'>
                 <StaticImage
                 src="../images/logogold.png"
                 loading="eager"
@@ -24,8 +25,9 @@ export default function Footer() {
                 alt=""
                 />
                 <span>POLTEL</span>
+                </Link>
             </div>
-            </Link>
+            
             {!isMobileLayout && <ul className='footer-data'>
                 <li>KRS: 0000422976  NIP: 836-185-66-08</li>
                 <li>Przedsiębiorca Telekomunikacyjny: 10130</li> 
@@ -33,7 +35,7 @@ export default function Footer() {
         </div>
         <ul className='footer-links'>
             <li><Link to="/faq" activeClassName='active'>FAQ</Link></li>
-            <li><Link to="/serws" activeClassName='active'>Serwis</Link></li>
+            <li><a href="https://e-poltel.pl/serwis/">Serwis</a></li>
             <li><Link to="/slownik-tematyczny" activeClassName='active'>Słownik tematyczny</Link></li>
             <li><Link to="/polityka-prywatnosci" activeClassName='active'>Polityka prywatności</Link></li>
             <li><Link to="/regulamin" activeClassName='active'>Regulamin</Link></li>

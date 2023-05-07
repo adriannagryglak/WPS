@@ -58,7 +58,7 @@
       }
     }
 
-    &.policy{
+    &.policy {
       text-align: center;
     }
   }
@@ -67,8 +67,38 @@
     h2 {
       margin-bottom: 50px;
     }
+
     ol {
       padding: 0;
     }
   }
+
+  &.privacy-policy {
+    div {
+      text-align: left;
+
+      ul {
+        padding: 20px 0 20px 20px;
+      }
+
+      a {
+        color: $theme-red;
+        transform: all 0.4s ease;
+
+        &:hover {
+          font-weight: bolder;
+        }
+      }
+
+      table {
+        border: 1px solid $theme-blue;
+        margin: 20px 0;
+        padding: 20px;
+        max-width: 100%;
+
+      }
+    }
+
+  }
+
 }

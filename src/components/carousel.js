@@ -1,6 +1,9 @@
 import React from 'react'
 import Slider from "infinite-react-carousel"
 import video from "../assets/hero-video.mp4"
+import video2 from "../assets/hero-video-2.mp4"
+import video3 from "../assets/hero-video-3.mp4"
+import video4 from "../assets/hero-video-4.mp4"
 import "./carousel.scss";
 
 export default function Carousel() {
@@ -9,15 +12,15 @@ export default function Carousel() {
     <Slider adaptiveHeight={true} dots arrows={false} className="carousel-container" >
     <div className="item">
       <video muted autoPlay loop loading="eager">
-        <source src={video} type="video/mp4" />
+        <source src={video4} type="video/mp4" />
       </video>
-      <h2>autorskie rozwiązanie telefonii voip</h2>
+
     </div>
     <div className="item">
     <video muted autoPlay loop>
-        <source src={video} type="video/mp4" />
+        <source src={video3} type="video/mp4" />
       </video>
-      <h2>2</h2>
+      
     </div>
     <div className="item">
     <video muted autoPlay loop>
@@ -27,9 +30,9 @@ export default function Carousel() {
     </div>
     <div className="item">
     <video muted autoPlay loop>
-        <source src={video} type="video/mp4" />
+        <source src={video2} type="video/mp4" />
       </video>
-      <h2>4</h2>
+      
     </div>
   </Slider>
   )

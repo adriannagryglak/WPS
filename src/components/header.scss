@@ -21,18 +21,6 @@
     opacity: 0.8;
   }
 
-  h2 {
-    text-align: center;
-    z-index: 2;
-    font-size: 2.2rem;
-      font-family: $font-text-light;
-      position: absolute;
-      top: 82%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-  }
-
   .header-container {
     width: 100%;
 
@@ -41,7 +29,7 @@
       padding: 0 60px;
 
       .header-caption {
-       margin: 0 auto;
+        margin: 0 auto;
         width: 60vw;
         max-width: 1200px;
         padding: 40px 50px;
@@ -49,9 +37,9 @@
         color: $theme-blue;
         border-radius: 15px;
         font-family: $font-lato;
-        font-weight: 600; 
+        font-weight: 600;
 
-        .phone-img{
+        .phone-img {
           float: right;
           width: 30%;
 
@@ -60,15 +48,35 @@
           }
         }
 
-        h2{
+        h2 {
           position: relative;
-          transform: none;
-          width: unset;
           margin-bottom: 40px;
           left: unset;
+          text-align: center;
+          z-index: 2;
+          font-size: 2.2rem;
+          font-family: $font-text-light;
+
+
+          &.header-title {
+            z-index: 10000000;
+            top: -24%;
+            color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+
+            @media (max-width:500px) {
+              top: -30%;
+            }
+          }
+
+          @media (max-width:500px) {
+           font-size: 1.8rem;
+          }
         }
 
-        h3{
+        h3 {
           font-family: $font-text;
           margin: 20px 0;
           font-size: 1.2rem;
@@ -81,35 +89,42 @@
           align-items: center;
           padding: 40px 20px;
 
-          p{
+          p {
             text-align: center;
           }
 
-          h2{
+          h2 {
             padding: 0;
             order: 1;
           }
-          .paragraph__first{
+
+          .paragraph__first {
             order: 2;
           }
-          a{
+
+          a {
             order: 3;
             cursor: pointer;
             font-family: $font-text;
-            &.read-more{
+
+            &.read-more {
               order: 8;
             }
           }
-          h3{
+
+          h3 {
             order: 6;
           }
-          .paragraph__second{
+
+          .paragraph__second {
             order: 4;
           }
-          .paragraph__third{
+
+          .paragraph__third {
             order: 7;
           }
-          .phone-img{
+
+          .phone-img {
             float: none;
             width: 65%;
             order: 5;
@@ -121,21 +136,21 @@
   }
 
   @media (max-width: 800px) {
-    h2{
+    h2 {
       font-size: 2rem;
       line-height: 2.5rem;
       padding: 0 60px;
     }
   }
-  
+
   @media (max-width: 590px) {
-    h2{
+    h2 {
       top: 76%;
     }
   }
 
   @media (max-width: 440px) {
-    h2{
+    h2 {
       top: 64%;
     }
   }

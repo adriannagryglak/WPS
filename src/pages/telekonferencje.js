@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import video from "../assets/hero-video.mp4"
+import video from "../assets/hero-video-4.mp4"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import "../styles/pages/subpage.scss"

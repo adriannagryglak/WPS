@@ -218,6 +218,25 @@ function AboutPage() {
           </div>
         </div>
 
+        <div className="ceo-container container">
+            <StaticImage
+                      src="../images/g-abramek.png"
+                      loading="lazy"
+                      placeholder="blurred"
+                      className="ceo-img"
+                      quality={95}
+                      formats={["auto", "webp", "avif"]}
+                      alt="portret, mężczyzna w garniturze, średniego wieku, czarne włosy."
+            />
+            <div className="ceo-info">
+              <p className="ceo-quote">„Jesteśmy dumni z możliwości kreowania telekomunikacyjnych rozwiązań przyszłości.”</p>
+              <p className="ceo-name">Grzegorz Abramek</p>
+              <p>PREZES ZARZĄDU</p>
+              <a href="tel:717776616">tel. (71) 777-66-16</a>
+              <a href="mailto:grzegorz.abramek@e-poltel.pl​">grzegorz.abramek@e-poltel.pl​</a>
+            </div>
+        </div>
+
         <h1>Co nas wyróżnia?</h1>
         <div className="about-specials container">
           <h2>PLATFORMA VOIP</h2>
@@ -261,24 +280,7 @@ function AboutPage() {
           </div>}
 
         </div>
-        <div className="ceo-container">
-      <StaticImage
-                src="../images/g-abramek.png"
-                loading="lazy"
-                placeholder="blurred"
-                className="ceo-img"
-                quality={95}
-                formats={["auto", "webp", "avif"]}
-                alt="portret, mężczyzna w garniturze, średniego wieku, czarne włosy."
-      />
-      <div className="ceo-info">
-        <p className="ceo-quote"></p>
-        <p className="ceo-name">Grzegorz Abramek</p>
-        <p>PREZES ZARZĄDU</p>
-        <a href="tel:717776616">tel. (71) 777-66-16</a>
-        <a href="mailto:grzegorz.abramek@e-poltel.pl​">grzegorz.abramek@e-poltel.pl​</a>
-      </div>
-    </div>
+        
       </section>
 
     

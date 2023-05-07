@@ -1,15 +1,22 @@
 import * as React from "react"
-
+import "../styles/pages/404.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Link } from "gatsby"
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <section className="not-found container">
+      <div>
+        <h1>404</h1>
+        <h2>Podany adres niestety nie istnieje</h2>
+        <Link to="/">powrot na start</Link>
+      </div>
+    </section>
+    
   </Layout>
 )
 
-export const Head = () => <Seo title="Nieznany adres |" />
+export const Head = () => <Seo title="Nieznany adres" />
 
 export default NotFoundPage

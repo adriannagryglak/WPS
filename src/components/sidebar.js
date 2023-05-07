@@ -55,7 +55,7 @@ export default function Sidebar(){
             <div className={isOpen ? "sidebar-menu open" : "sidebar-menu"} onClick={()=>{setIsOpen(false)}}>
                 <ul >
                     <li><Link to="/o-nas">o nas</Link></li>
-                    <li><Link to="/sklep">sklep</Link></li>
+                    <li><a href="http://sklep.e-poltel.pl/">sklep</a></li>
                     <li><AnchorLink to="/#kontakt" stripHash>kontakt</AnchorLink></li>
                     <li>
                         współpraca

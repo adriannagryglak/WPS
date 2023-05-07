@@ -202,7 +202,7 @@
     position: relative;
     text-align: left;
     margin: 0 auto;
-    padding-top: 100px;
+    //padding-top: 100px;
     padding-bottom: 150px;
     justify-content: center;
 
@@ -241,6 +241,7 @@
     .ceo-quote {
       font-family: $font-lato;
       font-style: italic;
+      font-size: 1rem;
     }
 
     @media (max-width: 800px) {
@@ -265,6 +266,8 @@
       .ceo-img {
         height: 150px;
         width: 150px;
+        min-height: 150px;
+        min-width: 150px;
       }
       p {
         font-size: 1rem;
