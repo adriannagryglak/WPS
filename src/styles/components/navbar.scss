@@ -1,0 +1,56 @@
+.navbar {
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    div {
+        display: flex;
+
+        .logo {
+            height: 50px;
+            margin-right: 50px;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-family: inherit;
+
+            li {
+                cursor: pointer;
+                padding: 8px 15px;
+                border: 1px solid $dark-grey;
+                border-radius: 50px;
+                transition: all 0.4s ease;
+
+                &:hover{
+                    border: 1px solid $text-grey;
+                }
+            }
+        }
+    }
+
+    .login-call {
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        width: 140px;
+        padding: 8px 15px;
+        border: 1px solid $dark-grey;
+        border-radius: 50px;
+        transition: all 0.4s ease;
+
+        &:hover{
+            border: 1px solid $text-grey;
+        }
+        span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.4s ease;
+        }
+    }
+}

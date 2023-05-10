@@ -1,0 +1,39 @@
+.header{
+    width: 100%;
+    min-height: 120vh; 
+    position: relative;
+    transition: transform 0.7s ease-in-out;
+
+    &.out{
+        transform: translateX(-80%);
+       
+    }
+    
+  h1{
+    margin-top: 200px;
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  h2{
+    font-weight: 100;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .circle{
+    position: absolute;
+    width: 110vh;
+    aspect-ratio: 1;
+    border: 2px dashed rgba($text-grey, 0.4);
+    border-radius: 50%;
+    top: -65%;
+    left: 45%;
+    z-index: 0;
+    transition: transform 1s ease-out;
+
+ 
+    
+}
+   
+}

@@ -3,5 +3,5 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
-import "./src/components/global.scss"
-import "./src/styles/preloader.scss"
+import "./src/styles/index.scss"
+

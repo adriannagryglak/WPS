@@ -24,26 +24,6 @@ exports.onRenderBody = ({
       crossOrigin="anonymous"
       key="azonixFont"
     />,
-    <link
-      rel="preload"
-      href="/fonts/ArkitypeRegular.otf"
-      as="font"
-      type="font/otf"
-      crossOrigin="anonymous"
-      key="arkitypeRegularFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/ArkitypeLight.otf"
-      as="font"
-      type="font/otf"
-      crossOrigin="anonymous"
-      key="arkitypeLightFont"
-    />,
-    <link as="script" rel="preload" href="/scripts/preloader.js" />,
-    <noscript>
-      <link rel="stylesheet" href="/styles/noscript.css" />
-    </noscript>,
     
   ])
   setBodyAttributes({

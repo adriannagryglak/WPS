@@ -1,0 +1,112 @@
+/* globals */
+
+.hidden-accessible{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.gold-stripe{
+  height: 4px;
+  width: 60px;
+  background-image: url(../images/gold.png);
+  background-size: cover;
+  margin-top: 1rem;
+}
+
+.dark-bg{
+  &::before{
+    background-color: rgba($color: $dark-grey, $alpha: 0.75);
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+ 
+}
+
+//for small subpage to take all 100vh
+#gatsby-focus-wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+}
+html {
+  scrollbar-width: none;
+}
+
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  //overflow-x: hidden;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover{
+    color: inherit;
+  }
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+

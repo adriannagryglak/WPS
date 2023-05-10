@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../styles/pages/404.scss"
+import "../styles/index.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Link } from "gatsby"

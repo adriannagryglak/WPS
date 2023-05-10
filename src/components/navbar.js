@@ -1,22 +1,36 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import "./navbar.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react'
+import { Link } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-const Navbar = () => (
-  <nav className="header-navbar">
-    <ul>
-        {/* <li><FontAwesomeIcon icon={faMagnifyingGlass} /></li> */}
-        <li><Link to="/abonament-bez-limitu" activeClassName="active-link">abonament bez limitu</Link></li>
-        <li><Link to="/centrale-ip-box" activeClassName="active-link">centrale ip pbx</Link></li>
-        <li><Link to="/nagrywanie-rozmow" activeClassName="active-link">nagrywanie rozmów</Link></li>
-        <li><Link to="/telekonferencje" activeClassName="active-link">telekonferencje</Link></li>
-    </ul>
-    <div className="logo">
-      <Link to="/">POLTEL</Link>
-    </div>
-  </nav>
-)
+export default function Navbar(props) {
 
-export default Navbar
+  return (
+    <nav className='navbar '>
+        <div>
+            <StaticImage
+                src="../images/logo-gold.png"
+                loading="eager"
+                placeholder="blurred"
+                className="logo"
+                quality={95}
+                objectFit={'contain'}
+                formats={["auto", "webp", "avif"]}
+                alt="złote logo, auto dostawcze otoczone okręgiem"
+                />
+            <ul>
+                <li><Link>oferta</Link></li>
+                <li><AnchorLink></AnchorLink>kontakt</li>
+                <li><AnchorLink></AnchorLink>o nas</li>
+            </ul>
+        </div>
+        
+        <div onClick={()=>{
+            props.handleClick();
+        }} className='login-call' >
+            <span style={{opacity: props.isLoging ? 0 : 1}}>logowanie</span>
+            <span style={{opacity: props.isLoging ? 1 : 0}}>powrót</span>
+        </div>
+    </nav>
+  )
+}

@@ -1,73 +1,34 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import "./header.scss"
-import Carousel from "./carousel.js"
-import { useState } from 'react';
-import { useMediaQuery } from 'react-responsive'
+import Navbar from "./navbar"
+import Login from "../components/login"
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import { useScroll, animated } from "react-spring";
 
 export default function Header() {
-  const [readMoreOn, setReadMoreOn]= useState(true);
-  const isMobileBox = useMediaQuery({ query: '(max-width: 500px)' });
+  const [isLoging, setIsLoging] = React.useState(false);
+  const [scrollVal, setScrollVal] = React.useState(0);
 
+  const { scrollYProgress } = useScroll({
+    onChange: ({ value: { scrollYProgress } }) => {
+      setScrollVal(scrollYProgress + 1);
+    }
+  });
+
+  isLoging ? disableBodyScroll(document) : enableBodyScroll(document);
+  
   return (
-    <header className="header">
-      <div className="header-container">
-        <Carousel />
-        <div className="header-caption-container">
-          <div className="header-caption">
-            <h2 className="header-title">autorskie rozwiązanie telefonii voip</h2>
-            <h2>Obniżamy koszty połączeń!</h2>
-            <StaticImage
-              src="../images/phone.png"
-              loading="eager"
-              placeholder="blurred"
-              className="phone-img"
-              quality={95}
-              formats={["auto", "webp", "avif"]}
-              alt=""
-            />
-            <p className="paragraph__first">
-              Nasza oferta skierowana jest do wszystkich, którzy chcą znacząco
-              usprawnić działanie swojej firmy oraz obniżyć koszty
-              telekomunikacji. Połączenia wykonywane w naszej sieci są darmowe,
-              dlatego jest ona idealnym rozwiązaniem dla firm i instytucji
-              posiadających rozproszone oddziały.
-              </p>
-              {!readMoreOn && isMobileBox ? <>
-                <p className="paragraph__second"><br/>
-              Dzięki zastosowaniu najnowszych rozwiązań z dziedziny
-              telekomunikacji oraz informatyki, możemy zaoferować najwyższą
-              jakość usług. Naszą zaletą jest bardzo duża elastyczność w
-              zakresie ich konfiguracji.
-            </p>
-            <h3>Dobór oferty na korzyść klienta </h3>
-            <p className="paragraph__third">
-              Indywidualna oferta cenowa zależna
-              od generowanego ruchu (stawki minutowe).             
-              <br /> Nielimitowane połączenia
-              stacjonarne i komórkowe do wszystkich sieci (ryczałt). 
-              <br /> = 20 – 50%
-              niższe rachunki względem aktualnej FV
-            </p></> : readMoreOn && isMobileBox ? <></> : <>
-            <p className="paragraph__second">
-              Dzięki zastosowaniu najnowszych rozwiązań z dziedziny
-              telekomunikacji oraz informatyki, możemy zaoferować najwyższą
-              jakość usług. Naszą zaletą jest bardzo duża elastyczność w
-              zakresie ich konfiguracji.
-            </p>
-            <h3>Dobór oferty na korzyść klienta </h3>
-            <p className="paragraph__third">
-              Indywidualna oferta cenowa zależna
-              od generowanego ruchu (stawki minutowe).             
-              <br /> Nielimitowane połączenia
-              stacjonarne i komórkowe do wszystkich sieci (ryczałt). 
-              <br /> = 20 – 50%
-              niższe rachunki względem aktualnej FV
-            </p>
-            </>}
-              {isMobileBox && <a className={!readMoreOn ? "read-more" : ""} onClick={()=>{setReadMoreOn(!readMoreOn)}}>{readMoreOn ? " czytaj więcej..." : " czytaj mniej..."}</a>}
-          </div>
-        </div>
+    <header className={isLoging  ? "header out" : "header "}>
+      <animated.div className="circle" style={{transform: `translate(${scrollVal*30}%,${scrollVal*40}%) rotate(${scrollVal*40}deg)`}}></animated.div>
+      <div className="container">
+        <Login />
+        <Navbar isLoging={isLoging} handleClick={()=>{setIsLoging(prev=>!prev)}}/>
+        <h1>Potrzebujesz coś przyczepić?</h1>
+        <h2>jesteś w dobrym miejscu.</h2>
+        <div className="gold-stripe"></div>
+      </div>
+      <div className="fancy">
+
+
       </div>
     </header>
   )
