@@ -29,7 +29,7 @@ module.exports = {
       options: {
         fonts: [
           `Archivo\:100,200,300,400,500,600,700,800,900`,
-          
+          `DM Sans\:400, 500, 700`,
         ],
         display: 'swap'
       }

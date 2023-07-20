@@ -1,39 +1,107 @@
-.header{
-    width: 100%;
-    min-height: 120vh; 
-    position: relative;
-    transition: transform 0.7s ease-in-out;
+.header {
+  width: 100%;
+  min-height: 120vh;
+  position: relative;
+  transition: transform 0.7s ease-in-out;
 
-    &.out{
-        transform: translateX(-80%);
-       
-    }
-    
-  h1{
-    margin-top: 200px;
-    font-weight: 100;
-    font-size: 3rem;
+
+  &.out {
+    transform: translateX(-80%);
+
   }
 
-  h2{
+  h1 {
+    margin-top: 200px;
+    font-weight: 100;
+    font-size: 3.6rem;
+  }
+
+  h2 {
     font-weight: 100;
     font-size: 1.6rem;
     margin-top: 1rem;
   }
 
-  .circle{
+  .fancy {
+    position: relative;
+    margin-top: 400px;
+
+    .swiper-container {
+      width: fit-content;
+      height: fit-content;
+      margin: 0 auto;
+      position: relative;
+
+      .swiper {
+        width: 70vw;
+        height: 500px;
+      }
+
+      span {
+        position: absolute;
+        pointer-events: none;
+        left: 50%;
+        z-index: 10;
+        font-size: 80px;
+        transform: translateX(-50%);
+        line-height: 100px;
+        overflow: hidden;
+
+        &.up {
+          top: -22%;
+          font-weight: 900;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $text-grey;
+          color: rgba($color: #000000, $alpha: 0);
+        }
+
+        &.down {
+          bottom: -20%;
+          font-weight: 900;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: $text-grey;
+          color: rgba($color: #000000, $alpha: 0);
+        }
+
+        &.active {
+          font-weight: 900;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background: url("../images/gold.png") no-repeat;
+          background-size: 200% 100%;
+          background-position: left;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.number {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(-100%, -50%);
+        }
+      }
+
+
+    }
+
+  }
+
+
+  .circle {
     position: absolute;
     width: 110vh;
     aspect-ratio: 1;
     border: 2px dashed rgba($text-grey, 0.4);
     border-radius: 50%;
-    top: -65%;
+    top: -85%;
     left: 45%;
     z-index: 0;
     transition: transform 1s ease-out;
+  }
 
- 
-    
-}
-   
+
+
 }

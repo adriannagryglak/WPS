@@ -1,7 +1,7 @@
   /* variables */
   
   $main-font: "Archivo";
-  $font-text: "ArkitypeRegular";
+  $font-text: "DM Sans";
   $font-text-light: "ArkitypeLight" ;
   $font-lato: "Lato";
   $theme-red: #a83031;
@@ -9,16 +9,16 @@
   $theme-bg: #fefefe;
 
   $dark-grey: #020202;
-  $text-grey: #f5f5f5;
+  $text-grey: #f6f6f6;
 
 /* fonts */
 
-@font-face {
-    font-family: "Azonix Regular";
-    font-style: normal;
-    font-weight: normal;
-    src: local("Azonix Regular"), url("/fonts/Azonix.woff") format("woff");
-  }
+// @font-face {
+//     font-family: "Azonix Regular";
+//     font-style: normal;
+//     font-weight: normal;
+//     src: local("Azonix Regular"), url("/fonts/Azonix.woff") format("woff");
+//   }
 
-
+/* breakpoints TODO */
   

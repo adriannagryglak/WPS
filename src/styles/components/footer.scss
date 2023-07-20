@@ -1,0 +1,60 @@
+ .footer {
+     background-color: $dark-grey;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 80px;
+     padding-bottom: 50px;
+
+     .lists-container {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         text-transform: uppercase;
+         font-size: 0.8rem;
+
+         .logo {
+             max-width: 4rem;
+             align-self: flex-start;
+         }
+
+         ul {
+
+
+             li {
+                 padding: 4px 0;
+             }
+         }
+
+
+     }
+
+     .icons-lists {
+         display: flex;
+         margin-bottom: 30px;
+         gap: 30px;
+
+         li {
+             svg {
+                 width: 1rem;
+                 height: 1rem;
+                 border: 1px solid $text-grey;
+                 border-radius: 50%;
+                 padding: 15px;
+             }
+         }
+     }
+
+     .footer-stripe {
+         height: 1px;
+         width: 100%;
+         background: $text-grey;
+         opacity: 0.6;
+         margin: 50px 0;
+     }
+
+     .created-by {
+         opacity: 0.6;
+         font-size: 0.7rem;
+     }
+ }

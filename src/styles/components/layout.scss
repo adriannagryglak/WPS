@@ -5,37 +5,179 @@ main {
     flex-direction: column;
     background-image: url('../images/bg.png');
     background-size: cover;
-    color: $text-grey;
-    font-family: $main-font;
     transition: transform 0.5s ease;
     position: relative;
-    overflow: hidden;
-   
-    section{
+    //overflow: hidden;
+    transition: transform 0.7s ease-in-out;
+
+    &.out {
+        transform: translateX(-80%);
+
+    }
+
+    section {
         position: relative;
     }
 
-    .container {
-        padding-left: 60px;
-        padding-right: 60px;
+}
 
-        @media (min-width: 768px) {
-            padding-left: 140px;
-            padding-right: 80px;
-        }
+.container {
+    padding-left: 60px;
+    padding-right: 60px;
 
-        @media (min-width: 1025px) {
-            padding-left: 160px;
-            padding-right: 100px;
-        }
-
-        @media (min-width: 1536px) {
-            padding-left: 210px;
-            padding-right: 150px;
-        }
+    @media (min-width: 768px) {
+        padding-left: 80px;
+        padding-right: 80px;
     }
 
+    @media (min-width: 1025px) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 
+    @media (min-width: 1536px) {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
 
+.cursor-wrapper{
+    height: 0;
+    width: 0;
+    visibility: none;
+}
+
+.main-cursor,
+.secondary-cursor {
+  z-index: 10000;
+  pointer-events: none;
+  // overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+}
+
+.main-cursor {
+  transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  //animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  mix-blend-mode: difference;
+
+  .main-cursor-background {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}
+
+.secondary-cursor {
+  width: 50px;
+  height: 50px;
+
+  .cursor-background {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed $text-grey;
+
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     
+    position: relative;
+    &:after,
+    &:before {
+      content: "";
+      opacity: 0;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: white;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+   
+  }
+}
+
+.slider {
+  .cursor-background {
+    animation: //scaleUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
+      bgUp 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+      //moj ksztalt
+      width: 50%;
+      border-radius: 50px;
+      border: none;
+     
+      //kropeczki na boczki
+    &:after {
+        opacity: 1;
+      animation:
+        translateRightDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    }
+
+    &:before {
+        opacity: 1;
+      animation:
+        translateLeftDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    }
+  }
+
+  .main-cursor {
+    //mala kulka maleje
+    opacity: 0;
+  }
+}
+
+.hovered {
+  .cursor-background {
+    opacity: 0
+  }
+
+  .main-cursor-background {
+    transform: scale(2);
+  }
+}
+
+
+@keyframes bgUp {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: black;
+  }
+}
+
+@keyframes bgDown {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+
+@keyframes translateLeftDot {
+  from {
+    transform: translate(-50%, -50%);
+  }
+
+  to {
+    transform: translate(-50%, 13px);
+  }
+}
+
+@keyframes translateRightDot {
+  from {
+    transform: translate(-50%, -50%);
+  }
+
+  to {
+    transform: translate(-50%, -13px);
+  }
 }

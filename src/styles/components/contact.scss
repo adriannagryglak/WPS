@@ -1,0 +1,62 @@
+.contact {
+    padding-bottom: 250px;
+    padding-top: 100px; 
+
+    .contact-container{
+        background-color: $text-grey;
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        color: $dark-grey;
+        padding: 50px;
+    }
+
+    .title-container {
+        text-align: left;
+        flex: 1;
+ 
+
+        .gold-stripe {
+            margin-right: auto;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-size: 2.4rem;
+        }
+
+        p {
+            margin-top: 100px;
+            font-size: 1.2rem;
+            font-weight: 100;
+            font-family: "DM Sans";
+        }
+
+        .contact-icons-container{
+            display: flex;
+            gap: 40px;
+            justify-content: flex-end;
+            padding-top: 40px;
+
+            svg{
+                height: 2rem;
+                width: 2rem;
+                transition: all 0.4s ease;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .contact-form{
+       
+        padding: 50px;
+        flex: 1;
+        text-align: center;
+        color: $dark-grey;
+    }
+
+
+}
