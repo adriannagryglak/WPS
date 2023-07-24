@@ -26,11 +26,16 @@
     position: relative;
     margin-top: 400px;
 
+    display: flex;
+    justify-content: flex-end;
+
     .swiper-container {
       width: fit-content;
       height: fit-content;
-      margin: 0 auto;
+      margin: 0 0 0 auto;
+      
       position: relative;
+
 
       .swiper {
         width: 70vw;
@@ -94,12 +99,12 @@
     position: absolute;
     width: 110vh;
     aspect-ratio: 1;
-    border: 2px dashed rgba($text-grey, 0.4);
+    border: 3px dashed rgba($text-grey, 0.2);
     border-radius: 50%;
-    top: -85%;
-    left: 45%;
+    // top: -85%;
+    // left: 45%;
     z-index: 0;
-    transition: transform 1s ease-out;
+    transition: transform  ease;
   }
 
 

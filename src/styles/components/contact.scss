@@ -1,20 +1,17 @@
 .contact {
     padding-bottom: 250px;
-    padding-top: 100px; 
+    padding-top: 100px;
 
-    .contact-container{
-        background-color: $text-grey;
+    .contact-container {
         display: flex;
         justify-content: space-between;
-        gap: 100px;
-        color: $dark-grey;
-        padding: 50px;
+        padding-bottom: 200px;
     }
 
     .title-container {
         text-align: left;
-        flex: 1;
- 
+        flex-basis: 50%;
+         padding-left: 100px;
 
         .gold-stripe {
             margin-right: auto;
@@ -32,30 +29,30 @@
             font-family: "DM Sans";
         }
 
-        .contact-icons-container{
+        .contact-icons-container {
             display: flex;
             gap: 40px;
             justify-content: flex-end;
             padding-top: 40px;
 
-            svg{
+            svg {
                 height: 2rem;
                 width: 2rem;
                 transition: all 0.4s ease;
 
-                &:hover{
+                &:hover {
                     transform: scale(1.2);
                 }
             }
         }
     }
 
-    .contact-form{
-       
+    .contact-form {
+
         padding: 50px;
         flex: 1;
         text-align: center;
-        color: $dark-grey;
+  
     }
 
 

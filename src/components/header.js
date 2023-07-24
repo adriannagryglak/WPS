@@ -12,12 +12,11 @@ export default function Header({isLoging}) {
   const { setType } = React.useContext(CustomCursorContext);
   const [activeSlide, setActiveSlide] = React.useState(0);
   const [scrollVal, setScrollVal] = React.useState(1);
-  const names = ["lawety", "przyczepy", "busy"];
-  //const numbers = ["2", "4", "1"];
+  const names = [ "przyczepy", "a może bus ?", "lawety",];
 
   const { scrollYProgress } = useScroll({
     onChange: ({ value: { scrollYProgress } }) => {
-      setScrollVal(scrollYProgress + 1);
+      setScrollVal(scrollYProgress);
     }
   });
 
@@ -28,23 +27,17 @@ export default function Header({isLoging}) {
     leave: { height: 0},
   });
 
-  // const transitionNumbers = useTransition(activeSlide, {
-  //   from: { opacity: 0},
-  //   enter: { opacity: 1},
-  //   leave: { opacity: 0},
-  // });
-  
-  //console.log(scrollVal)
 
   return (
     <header className={isLoging  ? "header " : "header "}>
-      <animated.div className="circle" style={{transform: `translate(${scrollVal*60}%,${scrollVal*60}%) rotate(${scrollVal*40}deg)`}}></animated.div>
+      <animated.div className="circle" style={{transform: `translate(${120 - scrollVal*350}%,${-80 + scrollVal*590}%) rotate(${scrollVal*360 -180}deg)`, 
+          gap: `${scrollVal * 20}px`}}></animated.div>
       <div className="container">
         <h1>Potrzebujesz coś przyczepić?</h1>
         <h2>jesteś w dobrym miejscu.</h2>
         <div className="gold-stripe" ></div>
       </div>
-      <div className="fancy">
+      <div className="fancy container">
         <div className="swiper-container" onMouseEnter={()=>{setType('slider')}} onMouseLeave={()=>{setType('default')}}>
         {transition((style, item)=>{
             return (<>
@@ -114,11 +107,6 @@ export default function Header({isLoging}) {
             </SwiperSlide>
 
           </Swiper>
-              
-
-          {/* {transitionNumbers((style, item)=>{
-            return <animated.span className="number" style={style}>{numbers[item]}</animated.span>
-          })} */}
           
         </div>
       </div>

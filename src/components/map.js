@@ -334,10 +334,8 @@ export default function Map() {
     ];
 
       return (
-        <section className="map">
-          {/* <h1><span>skąd ?</span> Zielonka pod Węglińcem <br/> dokąd? <span>Ty decydujesz !</span>
-          </h1> */}
-            <div style={{ height: '70vh', width: '100%' }} onMouseEnter={() => { setType('hovered') }} onMouseLeave={() => { setType('default') }}>
+ 
+            <div className="map" style={{ height: '70vh', width: '100%' }} onMouseEnter={() => { setType('hovered') }} onMouseLeave={() => { setType('default') }}>
                  <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyByWdr1fVwjjWaAfcwldCl6kTYH4u-0zHY" }}
                     defaultCenter={defaultProps.center}
@@ -351,8 +349,7 @@ export default function Map() {
                     />
                 </GoogleMapReact>
             </div>
-           
-        </section>
+  
       );
 
 }

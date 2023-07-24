@@ -64,7 +64,7 @@ main {
   .main-cursor-background {
     width: 25px;
     height: 25px;
-    background: white;
+    background: $text-grey;
     border-radius: 50%;
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   }
@@ -78,7 +78,7 @@ main {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px dashed $text-grey;
+    border: 2px dashed rgb(99, 96, 96);
 
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     

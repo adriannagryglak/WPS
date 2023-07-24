@@ -6,7 +6,6 @@ import Offer from "../components/offer"
 import Faq from "../components/faq"
 import "../styles/index.scss";
 import Contact from "../components/contact"
-import Map from "../components/map"
 
 
 function IndexPage() {
@@ -20,7 +19,6 @@ function IndexPage() {
         <Offer />
         <Faq />
         <Contact />
-        <Map />
       </Layout>
 
  )
